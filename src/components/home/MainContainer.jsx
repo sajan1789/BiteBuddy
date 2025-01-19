@@ -37,6 +37,7 @@ const MainContainer = () => {
           <p className='md:text-3xl text-xl font-bold capitalize text-headingColor '>
             Our fresh & healthy fruits 
           </p>
+          
           <span className='border-2 rounded-full border-orange-600 w-[135px] '></span>
           </div>
 

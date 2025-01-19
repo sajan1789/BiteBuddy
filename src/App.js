@@ -13,6 +13,7 @@ import ProtectedRoutes from './services/ProtectedRoutes';
 import { ToastContainer} from 'react-toastify';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import MeetMyTeam from './components/ui/MeetMyTeam';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
             <Route path='/signup' element={<SignUp />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/contactUs" element={<ContactUs />} />
+            <Route path="/MyTeam" element={<MeetMyTeam />} />
           </Routes>
         </div>
         <ToastContainer />

@@ -55,7 +55,7 @@ const DextopNavbar = () => {
       </li>
         <li onClick={handleNavigates} className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>ContactUs</li>
         <li onClick={handleNavigate} className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'> About Us</li>
-        <li className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'> Meet My Team</li>
+        <li onClick={() => navigate("/MyTeam")} className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'> Meet My Team</li>
     </ul>
 
     <div 
