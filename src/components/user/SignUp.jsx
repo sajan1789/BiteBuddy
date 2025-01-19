@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ellipse from '../../assets/ellipses.png';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/shopping.jpeg';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useCreateUser } from '../../react-query/QueriesMutations';
 import "react-toastify/dist/ReactToastify.css";
@@ -72,8 +72,8 @@ const SignUp = () => {
 
           <div className='flex w-full h-full items-center justify-center flex-col gap-14'>
             <div className='flex text-white items-center gap-4'>
-              <img src={logo} alt="" className='md:w-[50px] w-[40px] cursor-pointer' />
-              <h1 className='md:text-6xl text-5xl font-bold'>Dukaan</h1>
+              <img src={logo} alt="" className='md:w-[50px] h-[60px] w-[60px] rounded-full cursor-pointer' />
+              <h1 className='md:text-6xl text-5xl font-bold'>Quicko</h1>
             </div>
             <div className='md:w-[500px] w-full flex flex-col items-center gap-6 md:bg-[rgba(255,255,255,.07)] md:p-10 p-6 rounded-[25px] shadow-2xl md:border border-gray-600'>
               <h1 className='text-white text-[40px] font-medium text-center'>SIGN UP</h1>

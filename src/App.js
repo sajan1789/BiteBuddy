@@ -42,6 +42,7 @@ function App() {
         </div>
         <ToastContainer />
       </AnimatePresence>
+
     </Provider>
   );
 }

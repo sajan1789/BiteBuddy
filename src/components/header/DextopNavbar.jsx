@@ -37,15 +37,25 @@ const DextopNavbar = () => {
       const handleNavigates = () => {
         navigate('/contactUs')
       };
-    
+
+        const handleNavigateHome = () => {
+            navigate('/'); // Navigate to the home page
+          };
+   
 
   return (
     
     <div className='flex items-center gap-8'>
     <ul className='flex items-center gap-8 '>
-        <li className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'> Home</li>
+    <li
+        className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'
+        onClick={handleNavigateHome} // Add onClick event for navigation
+      >
+        Home
+      </li>
         <li onClick={handleNavigates} className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>ContactUs</li>
         <li onClick={handleNavigate} className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'> About Us</li>
+        <li className='text-base text-textColor font-medium hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'> Meet My Team</li>
     </ul>
 
     <div 

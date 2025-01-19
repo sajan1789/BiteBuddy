@@ -58,12 +58,12 @@ const ContactUs = () => {
           Submit
         </button>
       </form>
-      <div className="mt-8 text-center">
+      {/* <div className="mt-8 text-center">
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Contact Details</h2>
         <p className="text-lg text-gray-600">Phone: +1 (123) 456-7890</p>
         <p className="text-lg text-gray-600">Email: support@fooddeliveryapp.com</p>
         <p className="text-lg text-gray-600">Address: 123 Food Street, Flavor Town</p>
-      </div>
+      </div> */}
     </div>
     </>
   );
