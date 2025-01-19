@@ -50,7 +50,7 @@ const Profile = () => {
         }}
       >
         <div>
-        <h2 onClick={() => navigate(-1)} className='text-white font-semibold w-full h-full text-right md:p-10 p-6'>Back</h2>
+        <h2 onClick={() => navigate(-1)} className='text-white font-semibold w-full h-full cursor-pointer text-right md:p-10 p-6'>Back</h2>
         <div className='flex w-full h-full items-center justify-center flex-col gap-4'>
         
           <form onSubmit={handleSubmit} className='md:w-[500px] w-full flex flex-col items-center  md:bg-[rgba(255,255,255,.07)] md:p-10 p-6 rounded-[25px] shadow-2xl md:border border-gray-600'>

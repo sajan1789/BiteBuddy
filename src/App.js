@@ -11,6 +11,8 @@ import Login from './components/user/Login';
 import Profile from './components/user/Profile';
 import ProtectedRoutes from './services/ProtectedRoutes';
 import { ToastContainer} from 'react-toastify';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   return (
@@ -34,7 +36,8 @@ function App() {
             {/* Public Routes */}
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<SignUp />} />
-            
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/contactUs" element={<ContactUs />} />
           </Routes>
         </div>
         <ToastContainer />
