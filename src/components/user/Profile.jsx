@@ -1,6 +1,6 @@
 import React, { useState} from 'react';
 import ellipse from '../../assets/ellipses.png';
-import profile from '../../assets/logo.png';
+import profile from '../../assets/shopping.jpeg';
 import { useNavigate } from 'react-router-dom';
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from 'react-toastify';

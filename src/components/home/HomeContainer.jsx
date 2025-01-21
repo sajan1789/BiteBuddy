@@ -29,7 +29,7 @@ const HomeContainer = () => {
                 <img src={n.imageSrc} className='lg:w-40 w-20 -mt-8 lg:-mt-20 ' alt="I1" />
                 <p className='text-base lg:text-xl font-semibold text-textColor'>{n.name}</p>
                 <p className='text-[12px] lg:text-sm text-lighttextGray font-medium my-1 lg:my-3'>{n.decription}</p>
-                <p className='text-sm font-semibold text-headingColor'><span className='text-xs text-red-600'>₹</span>{n.price}</p>
+                <p className='text-sm font-semibold text-headingColor'><span className='text-xs text-red-600'>₹</span> {n.price*50}</p>
               </motion.div>
             ))}
 

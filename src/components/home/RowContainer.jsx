@@ -45,7 +45,7 @@ const RowContainer = ({ value }) => {
               <div className='w-full flex flex-row items-end justify-between px-4'>
                 <div className='flex items-center '>
                   <p className='text-3xl text-headingColor font-semibold'>
-                    <span className=' text-red-500'>₹</span>{item.price}
+                    <span className=' text-red-500'>₹ </span>{item.price*50}
                   </p>
                 </div>
                 <div className='flex flex-col items-end justify-end'><p className='text-textColor font-semibold text-base text-sm'>{item.name}</p>
