@@ -122,8 +122,8 @@ const OrdersModal = ({ isOpen, onClose }) => {
                           Quantity: {item.qnty}
                         </p>
                         <p className="text-gray-700 text-sm">
-                          Price: ₹{item.price} x {item.qnty} = ₹
-                          {(item.price * item.qnty).toFixed(2)}
+                          Price: ₹{item.price*40} x {item.qnty} = ₹
+                          {(item.price *40* item.qnty).toFixed(2)}
                         </p>
                       </div>
                     </div>
