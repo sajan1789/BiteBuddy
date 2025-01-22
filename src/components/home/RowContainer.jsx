@@ -5,7 +5,8 @@ import { carousel } from '../../utils/data';
 import { useDispatch } from 'react-redux';
 import { add } from '../../redux/cartSlice';
 
-const RowContainer = ({ value }) => {
+
+ const RowContainer = ({ value }) => {
   const containerWidth = carousel.length * 260;
 
   const dispatch = useDispatch();

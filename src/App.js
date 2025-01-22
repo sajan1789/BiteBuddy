@@ -16,6 +16,8 @@ import ContactUs from './pages/ContactUs';
 import MeetMyTeam from './components/ui/MeetMyTeam';
 
 function App() {
+
+
   return (
     <Provider store={store}>
       <AnimatePresence>

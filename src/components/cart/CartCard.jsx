@@ -6,14 +6,15 @@ import { add, clear, decreament, remove } from "../../redux/cartSlice";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import PaymentModal from "../modals/PaymentModal";
+import { addOrder } from "../../redux/orderSlice";
 
 const CartCard = () => {
   const cart = useSelector((state) => state.carts.cart);
   const address = useSelector((state) => state.address.address);
   const totalPrice = useSelector((state) => state.carts.totalPrice);
   const dispatch = useDispatch();
-
-  const DELIVERY_CHARGE = 2.5;
+   console.log(address)
+  const DELIVERY_CHARGE = 40;
   const subTotal = totalPrice;
   const total = subTotal + DELIVERY_CHARGE;
 
@@ -32,9 +33,6 @@ const CartCard = () => {
     dispatch(decreament(e));
   };
 
-
-
-
   const handleCheckout = () => {
     if (!address) {
       toast.error("Please add your delivery address before proceeding!", {
@@ -44,21 +42,38 @@ const CartCard = () => {
       });
       return;
     }
-
+  
     // Open payment modal
     setIsPaymentModalOpen(true);
   };
-
+  
   const handlePayment = (paymentInfo) => {
-    console.log("Payment Info:", paymentInfo);
+    // Prepare order details
+    const orderDetails = {
+      cart: [...cart], // Clone the current cart details
+      total: total, // Total price including delivery charge
+      address: address, // Delivery address
+      timestamp: new Date().toISOString(), // Timestamp for the order
+    };
+  
+    // Dispatch action to store the order in orderSlice
+    dispatch(addOrder(orderDetails));
+  
+    // Provide a toast notification
     toast.success("Order placed successfully!", {
       position: "top-center",
       autoClose: 3000,
       theme: "colored",
     });
+  
+    // Close the payment modal
     setIsPaymentModalOpen(false);
-    dispatch(clear())
+  
+    // Clear the cart
+    dispatch(clear());
   };
+  
+
 
   return (
     <div className="w-full h-full flex flex-col">
@@ -79,13 +94,13 @@ const CartCard = () => {
                 <p className="text-base text-sm text-gray-50">{item.name}</p>
                 <p className="text-[13px] block text-gray-300 font-semibold">
                   <span className="text-red-600">₹ </span>
-                  {item.price}
+                  {item.price*40}
                 </p>
               </div>
             </div>
             <p className="text-center md:flex hidden text-[13px] text-gray-300 font-semibold">
               <span className="text-red-600">₹</span>
-              {item.price * item.qnty}
+              {item.price*40 * item.qnty}
             </p>
             <div className="flex items-center gap-6 ">
               <div className="flex items-center gap-2">

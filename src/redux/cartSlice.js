@@ -44,7 +44,7 @@ const cartReducer = createSlice({
 })
 
 const calculateTotalPrice = (cart) => {
-    return cart.reduce((acc, item) => acc + (item.price * item.qnty), 0);
+    return cart.reduce((acc, item) => acc + (item.price*40 * item.qnty), 0);
 }
 
 export const { add, toggleCart, remove, clear, decreament } = cartReducer.actions
